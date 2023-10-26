@@ -29,6 +29,22 @@ class ClothingsController < ApplicationController
     render :show
   end
 
+  def update
+    @clothing = Clothing.find_by(id: params["id"])
+    @clothing.update(
+      name: params["name"] || @clothing.name,
+      price: params["price"] || @clothing.price,
+      image_url: params["image_url"] || @clothing.image_url,
+    )
+    render :show
+  end
+
+  def destroy
+    @clothing = Clothing.find_by(id: params["id"])
+    @clothing.destroy
+    render json: { message: "item successfully deleted" }
+  end
+
   # def blue_sweater
   #   @clothing = Clothing.first
   #   render :show

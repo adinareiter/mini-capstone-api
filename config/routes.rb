@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get "/clothings/:id" => "clothings#show"
 
   post "/clothings" => "clothings#create"
-
+  patch "/clothings/:id" => "clothings#update"
+  delete "/clothings/:id" => "clothings#destroy"
   # get "/blue_sweater", controller: "clothings", action: "blue_sweater"
   # get "/slippers", controller: "clothings", action: "slippers"
 
