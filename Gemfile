@@ -30,6 +30,9 @@ gem "jbuilder"
 #rack cors
 gem "rack-cors"
 
+#seed dump to pull data from the database and populate the seeds file
+gem "seed_dump"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
