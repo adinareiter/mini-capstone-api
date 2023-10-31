@@ -3,10 +3,24 @@
 #   {name: "slippers", price: "15.0", image_url: "https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&q=60&w=900&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2xpcHBlcnN8ZW58MHx8MHx8fDA%3D", description: "Once you wear this unforgettable slippers, you won't be able to take them off.", stock: nil},
 #   {name: "puffer jacket", price: "69.0", image_url: "https://media.istockphoto.com/id/1329845318/photo/brown-winter-down-jacket-front-and-back-view.webp?b=1&s=170667a&w=0&k=20&c=scug3grBM9jeGFFGEmm7fy5443qyPGsgz6qbjEQU_AE=", description: "This coat will keep you warm on the coldest winter day.", stock: nil}
 # ])
-clothing = Clothing.new({
-  name: "t-shirt",
-  price: 20,
-  image_url: "https://media.istockphoto.com/id/1347667305/photo/blank-sweatshirt-mock-up-in-front-and-back-views.webp?b=1&s=170667a&w=0&k=20&c=NZW8dm1yB2iZMmapyNG3qT1d-lokMwpHXHVBkRJmnhg=",
-  description: "long sleeved crew neck t-shirt black",
+# clothing = Clothing.new({
+#   name: "t-shirt",
+#   price: 20,
+#   image_url: "https://media.istockphoto.com/id/1347667305/photo/blank-sweatshirt-mock-up-in-front-and-back-views.webp?b=1&s=170667a&w=0&k=20&c=NZW8dm1yB2iZMmapyNG3qT1d-lokMwpHXHVBkRJmnhg=",
+#   description: "long sleeved crew neck t-shirt black",
+# })
+# clothing.save
+
+# supplier = Supplier.new({
+#   name: "John Smith",
+#   email: "johnsmith@example.com",
+#   phone_number: "1234567891",
+# })
+# supplier.save
+
+supplier = Supplier.new({
+  name: "Emma Evans",
+  email: "emmaevans@example.com",
+  phone_number: "3334445555",
 })
-clothing.save
+supplier.save

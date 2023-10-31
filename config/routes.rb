@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   post "/clothings" => "clothings#create"
   patch "/clothings/:id" => "clothings#update"
   delete "/clothings/:id" => "clothings#destroy"
+
+  get "/suppliers" => "suppliers#index"
+  get "/suppliers" => "suppliers#show"
   # get "/blue_sweater", controller: "clothings", action: "blue_sweater"
   # get "/slippers", controller: "clothings", action: "slippers"
 

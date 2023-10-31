@@ -15,7 +15,7 @@ class Clothing < ApplicationRecord
   end
 
   def tax
-    tax = price * 0.09
+    tax = price * 0.09x
     return tax
   end
 
