@@ -6,5 +6,6 @@ json.tax clothing.tax
 json.total clothing.total 
 json.image_url clothing.image_url
 json.description clothing.description
+json.supplier_id clothing.supplier_id
 json.created_at clothing.created_at
 json.updated_at clothing.updated_at

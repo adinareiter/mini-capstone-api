@@ -15,11 +15,15 @@ class Clothing < ApplicationRecord
   end
 
   def tax
-    tax = price * 0.09x
+    tax = price * 0.09
     return tax
   end
 
   def total
     return tax + price
+  end
+
+  def supplier
+    Supplier.find_by(id: supplier_id)
   end
 end
