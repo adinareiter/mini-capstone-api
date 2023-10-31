@@ -8,5 +8,6 @@ json.image_url clothing.image_url
 json.description clothing.description
 json.supplier_id clothing.supplier_id
 json.supplier clothing.supplier
+json.image clothing.image
 json.created_at clothing.created_at
 json.updated_at clothing.updated_at

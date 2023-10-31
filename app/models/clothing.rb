@@ -26,4 +26,8 @@ class Clothing < ApplicationRecord
   def supplier
     Supplier.find_by(id: supplier_id)
   end
+
+  # def image
+  #   Image.find_by(id: image_id)
+  # end
 end
