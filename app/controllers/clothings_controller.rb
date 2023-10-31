@@ -13,7 +13,6 @@ class ClothingsController < ApplicationController
     @clothing = Clothing.new(
       name: "boots",
       price: 40,
-      image_url: "image.png",
     )
     @clothing.save
     render :show
@@ -23,7 +22,6 @@ class ClothingsController < ApplicationController
     @clothing = Clothing.new(
       name: params["name"],
       price: params["price"],
-      image_url: params["image_url"],
     )
     @clothing.save
     if @clothing.valid?
@@ -38,7 +36,6 @@ class ClothingsController < ApplicationController
     @clothing.update(
       name: params["name"] || @clothing.name,
       price: params["price"] || @clothing.price,
-      image_url: params["image_url"] || @clothing.image_url,
     )
     if @clothing.valid?
       render :show
