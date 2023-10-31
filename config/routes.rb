@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   get "/suppliers" => "suppliers#index"
   get "/suppliers" => "suppliers#show"
+
+  get "/images" => "images#index"
+  get "/images" => "images#show"
   # get "/blue_sweater", controller: "clothings", action: "blue_sweater"
   # get "/slippers", controller: "clothings", action: "slippers"
 
