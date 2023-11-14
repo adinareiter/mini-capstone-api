@@ -23,11 +23,13 @@ class Clothing < ApplicationRecord
     return tax + price
   end
 
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
+  # def supplier
+  #   Supplier.find_by(id: supplier_id)
+  # end
+  belongs_to :supplier
 
-  def image
-    Image.where(clothing_id: id)
-  end
+  # def image
+  #   Image.where(clothing_id: id)
+  # end
+  has_many :images
 end

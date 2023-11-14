@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   # get "/all_clothings", controller: "clothings", action: "all_clothings"
   get "/clothings" => "clothings#index"
 
-  #  get "one_item/:id" => "clothing#one_item"
   get "/clothings/:id" => "clothings#show"
 
   post "/clothings" => "clothings#create"
@@ -15,9 +14,8 @@ Rails.application.routes.draw do
 
   get "/images" => "images#index"
   get "/images" => "images#show"
-  # get "/blue_sweater", controller: "clothings", action: "blue_sweater"
-  # get "/slippers", controller: "clothings", action: "slippers"
 
+  post "/users" => "users#create"
   # Defines the root path route ("/")
   # root "articles#index"
 end

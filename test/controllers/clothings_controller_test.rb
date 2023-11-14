@@ -14,12 +14,18 @@ class ClothingsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal ["id", "name", "price", "is_discounted?", "tax", "total", "description", "supplier_id", "supplier", "image", "created_at", "updated_at"], data.keys
+    assert_equal ["id", "name", "price", "is_discounted?", "tax", "total", "description", "supplier_id", "supplier", "images", "created_at", "updated_at"], data.keys
   end
 
   test "create" do
     assert_difference "Clothing.count", 1 do
-      post "/clothings.json", params: { name: "test clothing", price: 1 }
+      post "/clothings.json", params: { price: 1, name: "test clothing", description: "test description", supplier_id: Supplier.first.id }
+      data = JSON.parse(response.body)
+      assert_response 200
+      refute_nil data["id"]
+      assert_equal "test clothing", data["name"]
+      assert_equal "1.0", data["price"]
+      assert_equal "test description", data["description"]
     end
   end
 
@@ -37,9 +43,5 @@ class ClothingsControllerTest < ActionDispatch::IntegrationTest
       delete "/clothings/#{Clothing.first.id}.json"
       assert_response 200
     end
-  end
-
-  test "the truth" do
-    assert true
   end
 end

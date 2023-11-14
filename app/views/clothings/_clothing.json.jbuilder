@@ -7,6 +7,6 @@ json.total clothing.total
 json.description clothing.description
 json.supplier_id clothing.supplier_id
 json.supplier clothing.supplier
-json.image clothing.image
+json.images clothing.images
 json.created_at clothing.created_at
 json.updated_at clothing.updated_at

@@ -1,5 +1,6 @@
 class Supplier < ApplicationRecord
-  def clothings
-    Clothing.where(supplier_id: id)
-  end
+  has_many :clothings
+  # def clothings
+  #   Clothing.where(supplier_id: id)
+  # end
 end

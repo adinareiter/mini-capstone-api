@@ -20,8 +20,10 @@ class ClothingsController < ApplicationController
 
   def create
     @clothing = Clothing.new(
+      supplier_id: params["supplier_id"],
       name: params["name"],
       price: params["price"],
+      description: params["description"],
     )
     @clothing.save
     if @clothing.valid?
@@ -34,6 +36,7 @@ class ClothingsController < ApplicationController
   def update
     @clothing = Clothing.find_by(id: params["id"])
     @clothing.update(
+      supplier_id: params["supplier_id"] || @clothing.supplier_id,
       name: params["name"] || @clothing.name,
       price: params["price"] || @clothing.price,
     )
