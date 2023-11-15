@@ -1,5 +1,6 @@
 class ClothingsController < ApplicationController
   def index
+    pp current_user
     @clothings = Clothing.all
     render :index
   end
