@@ -1,4 +1,6 @@
 class ClothingsController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
+
   def index
     pp current_user
     @clothings = Clothing.all

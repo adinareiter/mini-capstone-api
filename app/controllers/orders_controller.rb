@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user
+
   def create
     clothing = Clothing.find_by(id: params[:clothing_id])
     # quantity = params["quantity"]

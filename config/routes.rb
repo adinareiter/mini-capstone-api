@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   get "/images" => "images#index"
   get "/images" => "images#show"
+  post "/images" => "images#create"
 
   get "/users" => "users#index"
   post "/users" => "users#create"
