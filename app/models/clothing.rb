@@ -33,4 +33,16 @@ class Clothing < ApplicationRecord
   #   Image.where(clothing_id: id)
   # end
   has_many :images
+
+  has_many :category_clothings
+
+  # Using the manual method instead of the shortcut so that I can return just the name
+
+  # has_many :categories, through: :category_clothings
+
+  def categories
+    category_clothings.map do |category_clothing|
+      category_clothing.category.name
+    end
+  end
 end

@@ -1,9 +1,6 @@
 require "test_helper"
 
 class OrdersControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
   setup do
     @user = User.create(name: "Test", email: "test@test.com", password: "password")
     @order = Order.create(user_id: @user.id, clothing_id: Clothing.first.id, quantity: 10)

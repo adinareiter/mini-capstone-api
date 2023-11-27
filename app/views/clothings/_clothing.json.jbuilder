@@ -1,12 +1,13 @@
 json.id clothing.id
 json.name clothing.name
 json.price clothing.price
+json.description clothing.description
+json.images clothing.images
+json.categories clothing.categories
 json.is_discounted? clothing.is_discounted?
 json.tax clothing.tax
 json.total clothing.total 
-json.description clothing.description
 json.supplier_id clothing.supplier_id
 json.supplier clothing.supplier
-json.images clothing.images
 json.created_at clothing.created_at
 json.updated_at clothing.updated_at
