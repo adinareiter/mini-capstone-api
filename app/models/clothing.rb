@@ -27,7 +27,6 @@ class Clothing < ApplicationRecord
   #   Supplier.find_by(id: supplier_id)
   # end
   belongs_to :supplier
-  has_many :orders
 
   # def image
   #   Image.where(clothing_id: id)
@@ -45,4 +44,8 @@ class Clothing < ApplicationRecord
       category_clothing.category.name
     end
   end
+
+  has_many :carted_products
+  has_many :users, through: :carted_products
+  has_many :orders, through: :carted_products
 end

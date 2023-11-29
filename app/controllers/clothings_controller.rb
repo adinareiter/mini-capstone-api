@@ -4,12 +4,19 @@ class ClothingsController < ApplicationController
   def index
     pp current_user
     @clothings = Clothing.all
+    if params[:category]
+      category = Category.find_by(name: params[:category])
+      @clothings = category.clothings
+    end
+
     render :index
   end
 
   def show
     @clothing = Clothing.find_by(id: params["id"])
-    render :show
+    category = Category.find_by(name: params[:category])
+    @clothing =
+      render :show
   end
 
   def create

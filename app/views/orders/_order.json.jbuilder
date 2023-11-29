@@ -2,8 +2,6 @@ json.id order.id
 json.user order.user
 json.clothing order.clothing
 json.user_id order.user_id
-json.clothing_id order.clothing_id
-json.quantity order.quantity
 json.subtotal order.subtotal
 json.tax order.tax
 json.total order.total

@@ -2,7 +2,15 @@ class OrdersController < ApplicationController
   before_action :authenticate_user
 
   def create
-    clothing = Clothing.find_by(id: params[:clothing_id])
+    clothing = current_user.carted_products.where(status: "carted")
+    index = 0
+    while index < clothings.length
+      variable = 
+      clothing = Clothing.find_by(id: params[:clothing_id])
+      index += 1
+    end
+  end
+    # clothing = Clothing.find_by(id: params[:clothing_id])
     # quantity = params["quantity"]
     subtotal = clothing.price * params[:quantity].to_i
     tax = subtotal * 0.09
